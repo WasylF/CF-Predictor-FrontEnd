@@ -7,7 +7,6 @@ import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.ListenableFutureTask;
 import org.json.JSONObject;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.util.Set;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -38,7 +37,7 @@ public class RatingChanges {
     cache = CacheBuilder.newBuilder()
       .refreshAfterWrite(timeToRefreshSeconds, TimeUnit.SECONDS)
       .build(
-        new CacheLoader<Integer, String>() {
+        new CacheLoader<>() {
           @Override
           public ListenableFuture<String> reload(Integer contestId, String oldValue) {
             ListenableFutureTask<String> task = ListenableFutureTask.create(() -> {
