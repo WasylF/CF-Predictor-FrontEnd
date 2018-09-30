@@ -53,7 +53,7 @@ article > .container > * {
 }
 
 #download a {
-    flex: 1 0px;
+    display: block;
     transition: .3s all;
 }
 

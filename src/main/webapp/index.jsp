@@ -21,13 +21,13 @@
             <div id="download">
                 <span>Download Extension:</span>
                 <a href="https://chrome.google.com/webstore/detail/cf-predictor/ocfloejijfhhkkdmheodbaanephbnfhn">
-                    <img src="images/chrome-128.png"/>
+                    <img src="images/Chrome_Horizontal.png"/>
                 </a>
                 <a href="https://addons.mozilla.org/en-US/firefox/addon/cf-predictor/">
-                    <img src="images/firefox-128.png"/>
+                    <img src="images/Firefox_Horizontal.png"/>
                 </a>
                 <a href="https://addons.opera.com/en/extensions/details/cf-predictor/">
-                    <img src="images/opera-128.png"/>
+                    <img src="images/Opera_Horizontal.png"/>
                 </a>
             </div>
             <a href="http://codeforces.com/blog/entry/50411" id="about">
