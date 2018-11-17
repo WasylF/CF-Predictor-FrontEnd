@@ -1,5 +1,5 @@
 function getContestList(callback) {
-    var server = "http://codeforces.com/api/contest.list?gym=false";
+    var server = "https://codeforces.com/api/contest.list?gym=false";
     $.getJSON(server, function (data) {
         var contests = [];
 
@@ -30,6 +30,12 @@ function getContestList(callback) {
     });
 }
 
+function updateForm() {
+    var select = document.getElementById('selectContest');
+    var option = select.options[select.selectedIndex];
+    var contestName = document.getElementById('contestName');
+    contestName.value = option.getAttribute('contestName');
+}
 
 getContestList(function (contests) {
     var select = document.getElementById("selectContest");
@@ -38,8 +44,11 @@ getContestList(function (contests) {
         var option = document.createElement('option');
 
         option.setAttribute('value', contests[i].contestId);
+        option.setAttribute('contestName', contests[i].name);
         option.appendChild(document.createTextNode(contests[i].name));
 
         select.appendChild(option);
     }
+
+    updateForm();
 });

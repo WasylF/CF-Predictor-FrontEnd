@@ -39,7 +39,7 @@
     <h1>CF-Predictor</h1>
 </header>
 <article>
-    <h2>Unofficial Results of <%=ContestProcessor.getName(contestId)%>
+    <h2>Unofficial Results of <%=request.getParameter("contestName")%>
     </h2>
 
     <table class="sortable" id="table">

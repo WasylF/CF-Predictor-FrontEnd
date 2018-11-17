@@ -20,9 +20,10 @@
 
     <article>
         <h2>Select Contest:</h2>
-        <form name="contestSelection" action="/roundResults.jsp" method="POST">
+        <form name="contestSelection" action="/roundResults.jsp" method="GET">
             <label>
-                <select id="selectContest" name="contestId" width="30" size="1">
+                <input type="hidden" name="contestName" id="contestName" value="cName"/>
+                <select id="selectContest" name="contestId" size="1" onchange="updateForm()">
                 </select>
             </label>
             <input type="submit" value="Get rating prediction" name="sbm"/>
