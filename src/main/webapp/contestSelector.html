@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contest selector</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="contestSelector.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="contestSelector.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<div class="container">
+    <header>
+        <h1>CF-Predictor</h1>
+    </header>
+
+    <article>
+        <h2>Select Contest:</h2>
+        <form name="contestSelection" action="/roundResults.jsp" method="POST">
+            <label>
+                <select id="selectContest" name="contestId" width="30" size="1">
+                </select>
+            </label>
+            <input type="submit" value="Get rating prediction" name="sbm"/>
+        </form>
+    </article>
+</div>
+
+
+</body>
+
+</html>
