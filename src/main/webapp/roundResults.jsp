@@ -32,6 +32,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="JS/sorttable.js"></script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129279641-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-129279641-1');
+    </script>
+
 </head>
 <body>
 <% if (contestId > 0) {%>
