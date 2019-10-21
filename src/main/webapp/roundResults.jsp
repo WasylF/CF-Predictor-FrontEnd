@@ -74,7 +74,10 @@
         <tr>
             <td><%= cr.getInt("rank")%>
             </td>
-            <td><%= cr.getString("handle")%>
+            <td>
+                <a href="https://codeforces.com/profile/<%= cr.getString("handle")%>">
+                    <%= cr.getString("handle")%>
+                </a>
             </td>
             <td style='background-color:rgba(<%= (delta >= 0 ? "0,255,0" : "255,0,0")%>, <%= opacity%>)'><%= delta%>
             </td>
