@@ -7,6 +7,10 @@ import com.google.gson.Gson;
 
 public class RatingChangesMap {
 
+    public RatingChangesMap() {
+        this.ratingChanges = new TreeMap<>();
+    }
+
     private RatingChangesMap(ContestantResultList contestantResultList) {
         this.ratingChanges = new TreeMap<>();
         for (var contestantResult : contestantResultList.result) {
@@ -14,7 +18,7 @@ public class RatingChangesMap {
         }
     }
 
-    ContestantResultList getContestantResultList(Iterable<String> handles) {
+    public ContestantResultList getContestantResultList(Iterable<String> handles) {
         var resultList = new ContestantResultList();
         resultList.status = "OK";
         for (var handle : handles) {
@@ -32,6 +36,14 @@ public class RatingChangesMap {
             throw new IllegalArgumentException("Rating changes status isn't OK: " + resultList.status);
         }
         return new RatingChangesMap(resultList);
+    }
+
+    public boolean isEmpty() {
+        return ratingChanges.isEmpty();
+    }
+
+    public int size() {
+        return ratingChanges.size();
     }
 
     private Map<String, ContestantResult> ratingChanges;

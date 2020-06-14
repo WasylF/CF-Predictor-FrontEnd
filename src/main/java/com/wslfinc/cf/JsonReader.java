@@ -6,6 +6,7 @@ import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
 /**
@@ -32,7 +33,7 @@ public class JsonReader {
     Exception exception = null;
     for (int i = 0; i < 3; i++) {
       try (InputStream is = new URL(url).openStream()) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
         String jsonText = readWhole(reader);
         JSONObject json = new JSONObject(jsonText);
         return json;
@@ -46,6 +47,21 @@ public class JsonReader {
     throw exception;
   }
 
+  public static String doGet(final String url) throws IOException {
+    IOException exception = null;
+    for (int i = 0; i < 3; i++) {
+      try (InputStream is = new URL(url).openStream()) {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
+        return readWhole(reader);
+      } catch (IOException ex) {
+        System.err.println("Failed read url: " + url
+                + " try #" + (i + 1) + "\n" + ex.getMessage());
+        exception = ex;
+      }
+    }
+
+    throw exception;
+  }
   public static boolean isExists(final String urlString) {
     try {
       final URL url = new URL(urlString);
