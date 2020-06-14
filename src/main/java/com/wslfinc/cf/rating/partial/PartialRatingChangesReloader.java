@@ -21,7 +21,7 @@ public class PartialRatingChangesReloader extends CacheLoader<Integer, RatingCha
             try {
                 String jsonResponse = JsonReader.doGet(requestURL);
                 RatingChangesMap ratingChangesMap = RatingChangesMap.createRatingChangesMap(jsonResponse);
-                System.out.printf("Parsed rating changes for %d contestants in contest %d.", ratingChangesMap.size(), contestId);
+                System.out.printf("Parsed rating changes for %d contestants in contest %d.\n", ratingChangesMap.size(), contestId);
                 return ratingChangesMap;
             } catch (Exception ex) {
 
