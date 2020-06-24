@@ -18,7 +18,7 @@ public class PartialRatingChangesCache {
 
 
     public PartialRatingChangesCache() {
-        this.timeToRefreshSeconds = 100;
+        this.timeToRefreshSeconds = 30;
         initCache();
     }
 
