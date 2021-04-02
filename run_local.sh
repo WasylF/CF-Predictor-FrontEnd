@@ -1,0 +1,1 @@
+java -jar target/dependency/webapp-runner.jar --port 6699 target/*.war
