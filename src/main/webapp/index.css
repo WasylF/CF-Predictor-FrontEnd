@@ -52,20 +52,26 @@ article > .container > * {
     border-bottom: 2px solid #ff9900;
 }
 
-#download a {
+#extensions {
+    background: #fff;
+    flex-flow: column wrap;
+    align-items: flex-start;
+}
+
+#extensions a {
     flex: 1 0px;
     transition: .3s all;
 }
 
-#download a:hover {
+#extensions a:hover {
     background: #eee;
 }
 
-#download a:active {
+#extensions a:active {
     background: #ddd;
 }
 
-#download img {
+#extensions img {
     box-sizing: border-box;
     position: relative;
     width: 100%;
