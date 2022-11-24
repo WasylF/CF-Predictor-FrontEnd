@@ -8,7 +8,9 @@ import org.json.JSONObject;
 public class Constants {
 
   public static final String BACK_END_URL
-    = "http://cf-predictor-compute.herokuapp.com/";
+ = "http://localhost:1237/";
+
+  // = "http://cf-predictor-compute.herokuapp.com/";
   // = "https://cf-predictor-backend.herokuapp.com";
   // = "http://cf-predictor-backend.us-west-2.elasticbeanstalk.com";
   // = "http://localhost:8084/CF-PredictorBackEnd/";
