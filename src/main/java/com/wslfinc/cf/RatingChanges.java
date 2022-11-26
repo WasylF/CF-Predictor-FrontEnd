@@ -29,7 +29,7 @@ public class RatingChanges {
 
 
   public RatingChanges() {
-    this.timeToRefreshSeconds = 100;
+    this.timeToRefreshSeconds = 20;
     initCache();
   }
 
